@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="https://kit.fontawesome.com/435298012d.js" crossorigin="anonymous"></script>
+    <title>Unit Converter</title>
+</head>
+
+<body>
+    <div class="container">
+        <p id="choice">What do you want to convert?</p>
+        <div class="radio_buttons">
+            <div class="row1">
+                <label><input type="radio" name="radio_btn" value="cmToInch" checked onclick="radioChecker()"> cm
+                    <span><i class="fas fa-long-arrow-alt-right"></i></span>
+                    inch &nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <label><input type="radio" name="radio_btn" value="inchToCm" onclick="radioChecker()"> inch <span><i
+                            class=" fas fa-long-arrow-alt-right"></i></span> cm</label>
+            </div>
+            <div class="row2">
+                <label><input type="radio" name="radio_btn" value="meterToFeet" onclick="radioChecker()"> meter <span><i
+                            class=" fas fa-long-arrow-alt-right"></i></span> feet</label>
+                <label><input type="radio" name="radio_btn" value="feetToMeter" onclick="radioChecker()"> feet <span><i
+                            class=" fas fa-long-arrow-alt-right"></i></span> meter</label>
+            </div>
+
+        </div>
+        <div class="input_box">
+            <input type="text" id="user_input" minlength="1" max="8" placeholder="enter cm " required>
+            <div id="info">TO GET</div>
+            <div class="final_data">inch</div>
+        </div>
+        <div class="result">Result goes here</div>
+        <div class="buttons">
+            <button onclick="converter(userChoice)">result</button>
+            <button onclick="reset()">reset</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
